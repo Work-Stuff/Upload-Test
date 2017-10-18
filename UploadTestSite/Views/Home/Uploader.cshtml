@@ -1,10 +1,24 @@
 ﻿@{
     Layout = "";
+
 }
+
 <html>
-    <body ng-app>
-        <h1>Uploader</h1>
-        {{2+2}}
-    <script src="~/lib/angular/angular.js"></script>
-    </body>
+<body ng-app="fileUpload" ng-controller="MyCtrl">
+<h4>Upload on file select</h4>
+<input type="file" ngf-select="uploadFiles($file, $invalidFiles)"
+        accept="image/*" ngf-max-height="1000" ngf-max-size="1MB">
+<br><br>
+File:
+<div style="font:smaller">{{f.name}} {{errFile.name}} {{errFile.$error}} {{errFile.$errorParam}}
+    <span class="progress" ng-show="f.progress >= 0">
+        <div style="width:{{f.progress}}%"  
+             ng-bind="f.progress + '%'"></div>
+    </span>
+</div>     
+{{errorMsg}}
+<script src="~/lib/ng-file-upload/ng-file-upload.js"></script>
+<script src="~/app/fileupload.js"> </script>
+<style src="~/app/fileupload.css"></style>
+</body>
 </html>
