@@ -6,7 +6,11 @@
     "jquery": "2.1.4",
     "jquery-validation": "1.14.0",
     "jquery-validation-unobtrusive": "3.2.4",
-    "angular": "1.5.7",
-    "angular-route": "1.5.7"
+    "angular-route": "v1.6.7-build.5483+sha.84294ec",
+    "angular": "v1.6.7-build.5483+sha.84294ec"
+  },
+  "resolutions": {
+    "angular": "v1.6.7-build.5483+sha.84294ec",
+    "angular-route": "v1.6.7-build.5483+sha.84294ec"
   }
 }
